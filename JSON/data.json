@@ -1,0 +1,68 @@
+{
+  "profile": [
+    {
+      "name":"Tam Le Minh",
+      "position":"Student at University of Science Ho Chi Minh City",
+      "country" :"Vietnam   ",
+      "major":"Software Engineering",
+      "email":"leminhtamkhtn@gmail.com",
+      "phone":"+841652044298"
+    }
+  ],
+  "summary":[
+    {
+      "summary1":"Independent research skills.",
+      "summary2":"Keen to learn new technologies.",
+      "summary3":"familiar with  array of programming languages and concepts, including:",
+      "summary4":"-Design patterns",
+      "summary5":"- Object Oriented programming ",
+      "summary6":"-Programming langues: C/C++,C# .NET",
+      "summary7":"-Database: MS SQL Server.",
+      "sumary8":"-Web: Javascript, CSS, ASP.NET, HTML "
+    }
+
+  ],
+  "experience":[
+    {
+      "experience1":"Graduation nextyear. I don't have much experience in work."
+    }
+  ],
+  "project":[
+    {
+      "project1":"Paint application with WPF.",
+      "project2":"Caro games online Gomoku."
+    }
+  ],
+
+  "language":[
+    {
+      "language1": "Vietnamese",
+      "language2": "English"
+    }
+  ],
+
+  "skill":[
+    {
+      "skill1":"Programing language: C, C++, C#, Java, HTMT CSS",
+      "skill2":"Teamwork, softskills, English"
+    }
+  ],
+  "education":[
+    {
+      "education1":"University of Science, Ho Chi Minh City"
+    }
+  ],
+  "images":[
+    {
+      "avarta":"images/tamle.jpg",
+      "summary":"images/summary.jpg",
+      "experience":"images/experience.jpg",
+      "project":"images/project.jpg",
+      "skill":"images/skill.jpg",
+      "language":"images/language.jpg",
+      "education":"images/education.jpg"
+
+    }
+  ]
+
+}

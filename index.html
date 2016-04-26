@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CV</title>
+    <script language="javascript" src="angular.min.js"></script>
+    <script language="javascript" src="script.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body style="background-color: #c0c0c0">
+    <div ng-app="mycv" class="container"style="width: 960px; margin: 50px auto; background-color: white">
+        <div   ng-controller="Ctrller" >
+            <div class="col-sm-12" id="profile">
+                <div class="col-sm-4" ng-repeat="i in myimage">
+                    <img src="{{i.avarta}}" style="width:250px;height:250px; margin-left: 40px;margin-top: 20px;">
+                </div>
+                <div class="col-sm-8">
+                    <div ng-repeat="x in myData" style=" margin-left: 10px; ">
+                        <div style="margin-top:20px;font-size: 20px;font-weight: bold;">{{x.name }}</div>
+                        <div style="font-size: 15px;">{{x.position}}</div>
+                        <div >Major: {{x.major}}</div>
+                        <div>Email: {{x.email}}</div>
+                        <div>Phone: {{x.phone}}</div>
+                        <div style="font-size: 15px;">Nationality: {{x.country}}</div>
+                        <br/><br/>
+                        <button style="margin-left: 20px;display: inline;border-radius:10px;width: 200px;height: 50px;background-color:#337ab7;">Send Tam Inmail</button>
+
+                    </div>
+
+                </div>
+                <br/>
+                <br/>
+                <div style="background-color: #c0c0c0; width: 100%; height: 20px;margin-top: 300px;"></div>
+
+            </div>
+
+
+                
+            <div class="col-sm-12" style="margin-top: 20px;">
+                <label style="background-color: #000000;color:#ffffff;width: 150px; height: 50px;padding: 15px;padding-right: 15px;">Background</label>
+                <div style="margin-top: 10px;" class="col-sm-12"id="summary" style="border-bottom: 1px solid #c0c0c0; ">
+                    <div ng-repeat="i in myimage"style="display: inline;">
+                        <img src="{{i.summary}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    </div>
+                    <p style="display: inline; font-size: 20px;">Summary</p>
+                    <div ng-repeat="y in mySummary" style="margin-left: 30px; margin-top: 10px;">
+                        <div> {{y.summary1}}</div>
+                        <div> {{y.summary2}}</div>
+                        <div> {{y.summary3}}</div>
+                        <div> {{y.summary4}}</div>
+                        <div> {{y.summary5}}</div>
+                        <div> {{y.summary6}}</div>
+                        <div> {{y.summary7}}</div>
+                        <div> {{y.summary8 }}</div>
+
+                    </div>
+                    <br/>
+                    <div style="background-color: #c0c0c0;width: 100px;height: 1px;"/>
+                </div>
+                <hr>
+                <div class="col-sm-12" id="experience" style="border-bottom: 1px solid #c0c0c0; ">
+                    <br/><br/>
+                    <div ng-repeat="i in myimage"style="display: inline;">
+                        <img src="{{i.experience}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    </div>
+                    <p style="display: inline; font-size: 20px;">Experience</p>
+                    <div ng-repeat="ex in myExperience">
+                        <div style="margin-left: 30px;margin-top: 20px;">{{ex.experience1}}</div>
+                    </div>
+                    <br/><br/>
+
+                </div>
+
+
+                <hr>
+                <div class="col-sm-12" id="project"style="border-bottom: 1px solid #c0c0c0; ">
+                    <br/><br/>
+                    <div ng-repeat="i in myimage"style="display: inline;"   >
+                        <img src="{{i.project}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    </div>
+                    <p style="display: inline; font-size: 20px;">Project</p>
+
+                    <ul ng-repeat="p in myproject" style="margin-top: 10px;">
+                        <li>{{p.project1}}</li>
+                        <li>{{p.project2}}</li>
+                    </ul>
+
+                    <br/><br/>
+                </div>
+                <hr>
+                <div class="col-sm-12" id="language"style="border-bottom: 1px solid #c0c0c0; ">
+                    <br/><br/>
+                    <div ng-repeat="i in myimage"style="display: inline;">
+                        <img src="{{i.language}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    </div>
+                    <p style="display: inline; font-size: 20px;">Language</p>
+                    <div ng-repeat="a in myLanguage" style="margin-left:20px;margin-top: 20px;">
+                        <div style="display: inline;margin-top: 20px;">{{a.language1}}</div>
+                        <div style="display:inline; margin-left: 40%;">{{a.language2}}</div>
+                    </div>
+                    <br/><br/>
+                </div>
+                <hr>
+                <div class="col-sm-12" id="skill"style="border-bottom: 1px solid #c0c0c0; ">
+                    <br/><br/>
+                    <div ng-repeat="i in myimage" style="display: inline;">
+                        <img src="{{i.skill}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    </div>
+                    <p style="display: inline; font-size: 20px;">Skill</p>
+                    <p style="margin-top: 20px;margin-left: 30px;">Top skill</p>
+                    <ul ng-repeat="s in myskill" style="margin-top: 10px;">
+                        <li>{{s.skill1}}</li>
+                        <li>{{s.skill2}}</li>
+                    </ul>
+
+
+                    <br/><br/>
+                </div>
+                <div class="col-sm-12" id="education"style="border-bottom: 1px solid #c0c0c0; ">
+                    <br/><br/>
+                    <div ng-repeat="i in myimage"style="display: inline;">
+                        <img src="{{i.education}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    </div>
+                    <p style="display: inline; font-size: 20px;">Education</p>
+                    <ul ng-repeat="e in myeducation" style="margin-top: 10px;">
+                        <li>{{e.education1}}</li>
+
+                    </ul>
+
+                    <br/><br/>
+                </div>
+                <hr>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+</body>
+</html>
