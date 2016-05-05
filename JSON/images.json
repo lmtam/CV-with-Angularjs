@@ -1,0 +1,14 @@
+{
+  "images":[
+    {
+      "avarta":"images/tamle.jpg",
+      "summary":"images/summary.jpg",
+      "experience":"images/experience.jpg",
+      "project":"images/project.jpg",
+      "skill":"images/skill.jpg",
+      "language":"images/language.jpg",
+      "education":"images/education.jpg"
+
+    }
+  ]
+}
