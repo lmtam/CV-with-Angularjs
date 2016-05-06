@@ -42,91 +42,130 @@
                 
             <div class="col-sm-12" >
                 <label id="backgroundlable" >Background</label>
+
                 <div  class="col-sm-12"id="summary" >
-                    <div ng-repeat="i in myimage" id ="divimg" >
+                    <div ng-repeat="i in myimage" class ="divimg" >
                         <img src="{{i.summary}}" id="imgsummary" />
                     </div>
-                    <p id="txttitlebackground" >Summary</p>
-                    <button id="btnAdd" >Add</button>
-                    <div ng-repeat="y in mySummary" id="summaryvalue">
-                        <div href="#" editable-text="y.summaryvalue"> {{y.summaryvalue || "empty"}}</div>
+                    <p class="txttitlebackground" >Summary</p>
+
+                    <div >
+                        <button class="btnAdd" ng-click="IsAddSummary=true" >Add</button>
+                        <div ng-repeat="y in mySummary" id="summaryvalue">
+                            <div href="#" editable-text="y.summaryvalue"> {{y.summaryvalue || "empty"}}</div>
+                        </div>
                     </div>
+                    <br/>
+                    <form ng-show="IsAddSummary">
+                        <p class="txtfrm" >Add Summary :</p>
+                        <input class="txtinput"  type="text" ng-model="txtsummaryvalue" />
+                        <input class="btnSave"  type="button" value="Save" ng-click="AddSummary()" />
+                    </form>
                     <br/>
                     <div id="tempdiv"/>
                 </div>
+
                 <hr>
+
                 <div class="col-sm-12" id="experience" >
                     <br/><br/>
-                    <div ng-repeat="i in myimage"id="divimg">
+                    <div ng-repeat="i in myimage"class="divimg">
                         <img src="{{i.experience}}" id="imgexperience" />
                     </div>
-                    <p id="txttitlebackground" >Experience</p>
-                    <button id="btnAdd" >Add</button>
+                    <p class="txttitlebackground" >Experience</p>
+                    <button class="btnAdd" ng-click="IsAddExperience=true" >Add</button>
                     <div ng-repeat="ex in myExperience">
                         <div id="experiencevalue" href="#" editable-text="ex.experiencevalue">{{ex.experiencevalue || "empty"}}</div>
                     </div>
                     <br/><br/>
-
+                    <form ng-show="IsAddExperience">
+                        <p class="txtfrm" >Add Experience :</p>
+                        <input class="txtinput"  type="text" ng-model="txtexperiencevalue" />
+                        <input class="btnSave"  type="button" value="Save" ng-click="AddExperience()"/>
+                    </form>
+                    <br/>
                 </div>
 
 
-                <hr>
+
+
+
                 <div class="col-sm-12" id="project">
                     <br/><br/>
-                    <div ng-repeat="i in myimage" id="divimg"   >
+                    <div ng-repeat="i in myimage" class="divimg"   >
                         <img src="{{i.project}}" id ="imgproject" />
                     </div>
-                    <p id="txttitlebackground">Project</p>
-                    <button id="btnAdd" >Add</button>
+                    <p class="txttitlebackground">Project</p>
+                    <button class="btnAdd" ng-click="IsAddProject=true;" >Add</button>
                     <ul ng-repeat="p in myproject" id="projectvalue" >
                         <li href="#" editable-text="p.projectvalue">{{p.projectvalue || "empty"}}</li>
 
                     </ul>
 
                     <br/><br/>
+                    <form ng-show="IsAddProject">
+                        <p class="txtfrm" >Add Project :</p>
+                        <input class="txtinput"  type="text" ng-model="txtprojectvalue" />
+                        <input class="btnSave"  type="button" value="Save" ng-click="AddProject()"/>
+                    </form>
+                    <br/>
                 </div>
                 <hr>
                 <div class="col-sm-12" id="language">
                     <br/><br/>
-                    <div ng-repeat="i in myimage" id="divimg" >
+                    <div ng-repeat="i in myimage" class="divimg" >
                         <img src="{{i.language}}"id="imglanguage" />
                     </div>
-                    <p id="txttitlebackground">Language</p>
-                    <button id="btnAdd" >Add</button>
+                    <p class="txttitlebackground">Language</p>
+                    <button class="btnAdd" ng-click="IsAddLanguage=true" >Add</button>
                     <ul ng-repeat="a in myLanguage"id="languagevalue" >
                         <li  href="#" editable-text="a.languagevalue">{{a.languagevalue || "empty"}}</li>
                     </ul>
                     <br/><br/>
+                    <form ng-show="IsAddLanguage">
+                        <p class="txtfrm" >Add Language :</p>
+                        <input class="txtinput"  type="text" ng-model="txtlanguagevalue" />
+                        <input class="btnSave"  type="button" value="Save" ng-click="AddLanguage()"/>
+                    </form>
+                    <br/>
                 </div>
                 <hr>
                 <div class="col-sm-12" id="skill">
                     <br/><br/>
-                    <div ng-repeat="i in myimage" id="divimg">
+                    <div ng-repeat="i in myimage" class="divimg">
                         <img src="{{i.skill}}"id="imgskill"/>
                     </div>
-                    <p id="txttitlebackground" >Skill</p>
-                    <button id="btnAdd" >Add</button>
+                    <p class="txttitlebackground" >Skill</p>
+                    <button class="btnAdd" ng-click="IsAddSkill=true">Add</button>
                     <p id="txttopskill">I also know...</p>
                     <ul ng-repeat="s in myskill" id="skillvalue" >
                         <li href="#" editable-text="s.skillvalue">{{s.skillvalue || "empty"}}</li>
-
                     </ul>
-
-
                     <br/><br/>
+                    <form ng-show="IsAddSkill">
+                        <p class="txtfrm" >Add Skill :</p>
+                        <input class="txtinput"  type="text" ng-model="txtskillvalue" />
+                        <input class="btnSave"  type="button" value="Save" ng-click="AddSkill()"/>
+                    </form>
+                    <br/>
                 </div>
                 <div class="col-sm-12" id="education" >
                     <br/><br/>
-                    <div ng-repeat="i in myimage"id="divimg">
+                    <div ng-repeat="i in myimage"class="divimg">
                         <img src="{{i.education}}" id="imgeducation"/>
                     </div>
-                    <p id="txttitlebackground">Education</p>
-                    <button id="btnAdd" >Add</button>
+                    <p class="txttitlebackground">Education</p>
+                    <button class="btnAdd" ng-click="IsAddEducation=true;">Add</button>
                     <ul ng-repeat="e in myeducation" id="educationvalue">
                         <li href="#" editable-text="e.educationvalue">{{e.educationvalue || "empty"}}</li>
                     </ul>
-
                     <br/><br/>
+                    <form ng-show="IsAddEducation">
+                        <p class="txtfrm" >Add Education :</p>
+                        <input class="txtinput"  type="text" ng-model="txteducationvalue" />
+                        <input class="btnSave"  type="button" value="Save" ng-click="AddEducation()"/>
+                    </form>
+                    <br/>
                 </div>
                 <hr>
 

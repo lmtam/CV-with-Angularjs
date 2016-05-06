@@ -43,4 +43,41 @@ app.controller('Ctrller', function($scope, $http) {
             $scope.myeducation = response.data.education;
         });
 
+     $scope.IsAddSummary=false;
+    $scope.IsAddExperience=false;
+    $scope.IsAddProject=false;
+    $scope.IsAddLanguage=false;
+    $scope.IsAddSkill=false;
+    $scope.IsAddEducation=false;
+
+    $scope.AddSummary = function(){
+        $scope.mySummary.push({summaryvalue:$scope.txtsummaryvalue});
+        $scope.IsAddSummary=false;
+        $scope.txtsummaryvalue="";
+    };
+    $scope.AddExperience = function(){
+        $scope.myExperience.push({experiencevalue:$scope.txtexperiencevalue});
+        $scope.IsAddExperience=false;
+        $scope.txtexperiencevalue="";
+    };
+    $scope.AddProject = function(){
+        $scope.myproject.push({projectvalue:$scope.txtprojectvalue});
+        $scope.IsAddProject=false;
+        $scope.txtprojectvalue="";
+    };
+    $scope.AddLanguage = function(){
+        $scope.myLanguage.push({languagevalue:$scope.txtlanguagevalue});
+        $scope.IsAddLanguage=false;
+        $scope.txtlanguagevalue="";
+    };
+    $scope.AddSkill = function(){
+        $scope.myskill.push({skillvalue:$scope.txtskillvalue});
+        $scope.IsAddSkill=false;
+        $scope.txtskillvalue="";
+    };
+    $scope.AddEducation = function(){
+        $scope.myeducation.push({educationvalue:$scope.txteducationvalue});
+        $scope.IsAddEducation=false;
+        $scope.txteducationvalue="";
+    };
 });
