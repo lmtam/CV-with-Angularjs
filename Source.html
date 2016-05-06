@@ -11,60 +11,59 @@
     <script src="xeditable.js"></script>
 
 </head>
-<body style="background-color: #c0c0c0">
-    <div ng-app="mycv" class="container"style="width: 960px; margin: 50px auto; background-color: white">
+<body >
+    <div ng-app="mycv" class="container" id= "mainapp">
         <div   ng-controller="Ctrller" >
             <div class="col-sm-12" id="profile">
                 <div class="col-sm-4" ng-repeat="i in myimage">
-                    <img src="{{i.avarta}}" style="width:250px;height:250px; margin-left: 40px;margin-top: 20px;">
+                    <img src="{{i.avarta}}" id="imgavarta" >
                 </div>
                 <div class="col-sm-8">
-                    <div ng-repeat="x in myData" style=" margin-left: 10px; ">
-                        <div style="margin-top:20px;font-size: 20px;font-weight: bold;" href="#" editable-text="x.name">{{x.name || "empty"}} </div>
-                        <div style="font-size: 15px;"href="#" editable-text="x.position">{{x.position || "empty"}}</div>
+                    <div ng-repeat="x in myData" id="txtprofile">
+                        <div id="txtname"  href="#" editable-text="x.name">{{x.name || "empty"}} </div>
+                        <div href="#" editable-text="x.position">{{x.position || "empty"}}</div>
                         <div href="#" editable-text="x.major">Major: {{x.major || "empty"}}</div>
                         <div href="#" editable-text="x.email">Email: {{x.email || "empty"}}</div>
                         <div href="#" editable-text="x.phone">Phone: {{x.phone || "empty"}}</div>
-                        <div style="font-size: 15px;" href="#" editable-text="x.country">Nationality: {{x.country || "empty"}}</div>
+                        <div href="#" editable-text="x.country">Nationality: {{x.country || "empty"}}</div>
                         <br/><br/>
-                        <button style="margin-left: 20px;display: inline;border-radius:10px;width: 200px;height: 50px;background-color:#337ab7;">Send Tam Inmail</button>
+                        <button id="btnSendmail" >Send Tam Inmail</button>
 
                     </div>
 
                 </div>
                 <br/>
                 <br/>
-                <div style="background-color: #c0c0c0; width: 150%; height: 20px;margin-top: 300px; margin-left: -30px;"></div>
+                <div id="brdiv" ></div>
 
             </div>
 
 
                 
-            <div class="col-sm-12" style="margin-top: 20px;">
-                <label style="background-color: #000000;color:#ffffff;width: 150px; height: 50px;padding: 15px;padding-right: 15px;margin-left: -30px;margin-top: -50px;">Background</label>
-                <div style="margin-top: 10px;" class="col-sm-12"id="summary" style="border-bottom: 1px solid #c0c0c0; ">
-                    <div ng-repeat="i in myimage"style="display: inline;">
-                        <img src="{{i.summary}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+            <div class="col-sm-12" >
+                <label id="backgroundlable" >Background</label>
+                <div  class="col-sm-12"id="summary" >
+                    <div ng-repeat="i in myimage" id ="divimg" >
+                        <img src="{{i.summary}}" id="imgsummary" />
                     </div>
-                    <p style="display: inline; font-size: 20px;">Summary</p>
-                    <button style="display: inline; width: 50px;height: 30px; margin-left: 70%;">Add</button>
-                    <div ng-repeat="y in mySummary" style="margin-left: 30px; margin-top: 10px;">
+                    <p id="txttitlebackground" >Summary</p>
+                    <button id="btnAdd" >Add</button>
+                    <div ng-repeat="y in mySummary" id="summaryvalue">
                         <div href="#" editable-text="y.summaryvalue"> {{y.summaryvalue || "empty"}}</div>
-
-
                     </div>
                     <br/>
-                    <div style="background-color: #c0c0c0;width: 100%;height: 0px;"/>
+                    <div id="tempdiv"/>
                 </div>
                 <hr>
-                <div class="col-sm-12" id="experience" style="border-bottom: 1px solid #c0c0c0; ">
+                <div class="col-sm-12" id="experience" >
                     <br/><br/>
-                    <div ng-repeat="i in myimage"style="display: inline;">
-                        <img src="{{i.experience}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    <div ng-repeat="i in myimage"id="divimg">
+                        <img src="{{i.experience}}" id="imgexperience" />
                     </div>
-                    <p style="display: inline; font-size: 20px;">Experience</p>
+                    <p id="txttitlebackground" >Experience</p>
+                    <button id="btnAdd" >Add</button>
                     <div ng-repeat="ex in myExperience">
-                        <div style="margin-left: 30px;margin-top: 20px;" href="#" editable-text="ex.experiencevalue">{{ex.experiencevalue || "empty"}}</div>
+                        <div id="experiencevalue" href="#" editable-text="ex.experiencevalue">{{ex.experiencevalue || "empty"}}</div>
                     </div>
                     <br/><br/>
 
@@ -72,14 +71,14 @@
 
 
                 <hr>
-                <div class="col-sm-12" id="project"style="border-bottom: 1px solid #c0c0c0; ">
+                <div class="col-sm-12" id="project">
                     <br/><br/>
-                    <div ng-repeat="i in myimage"style="display: inline;"   >
-                        <img src="{{i.project}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    <div ng-repeat="i in myimage" id="divimg"   >
+                        <img src="{{i.project}}" id ="imgproject" />
                     </div>
-                    <p style="display: inline; font-size: 20px;">Project</p>
-
-                    <ul ng-repeat="p in myproject" style="margin-top: 10px;">
+                    <p id="txttitlebackground">Project</p>
+                    <button id="btnAdd" >Add</button>
+                    <ul ng-repeat="p in myproject" id="projectvalue" >
                         <li href="#" editable-text="p.projectvalue">{{p.projectvalue || "empty"}}</li>
 
                     </ul>
@@ -87,26 +86,28 @@
                     <br/><br/>
                 </div>
                 <hr>
-                <div class="col-sm-12" id="language"style="border-bottom: 1px solid #c0c0c0; ">
+                <div class="col-sm-12" id="language">
                     <br/><br/>
-                    <div ng-repeat="i in myimage"style="display: inline;">
-                        <img src="{{i.language}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    <div ng-repeat="i in myimage" id="divimg" >
+                        <img src="{{i.language}}"id="imglanguage" />
                     </div>
-                    <p style="display: inline; font-size: 20px;">Language</p>
-                    <ul ng-repeat="a in myLanguage" style="margin-left:20px;margin-top: 20px;">
-                        <li style="display: inline ; margin-top: 20px;" href="#" editable-text="a.languagevalue">{{a.languagevalue || "empty"}}</li>
+                    <p id="txttitlebackground">Language</p>
+                    <button id="btnAdd" >Add</button>
+                    <ul ng-repeat="a in myLanguage"id="languagevalue" >
+                        <li  href="#" editable-text="a.languagevalue">{{a.languagevalue || "empty"}}</li>
                     </ul>
                     <br/><br/>
                 </div>
                 <hr>
-                <div class="col-sm-12" id="skill"style="border-bottom: 1px solid #c0c0c0; ">
+                <div class="col-sm-12" id="skill">
                     <br/><br/>
-                    <div ng-repeat="i in myimage" style="display: inline;">
-                        <img src="{{i.skill}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    <div ng-repeat="i in myimage" id="divimg">
+                        <img src="{{i.skill}}"id="imgskill"/>
                     </div>
-                    <p style="display: inline; font-size: 20px;" >Skill</p>
-                    <p style="margin-top: 20px;margin-left: 30px;">Top skill</p>
-                    <ul ng-repeat="s in myskill" style="margin-top: 10px;">
+                    <p id="txttitlebackground" >Skill</p>
+                    <button id="btnAdd" >Add</button>
+                    <p id="txttopskill">I also know...</p>
+                    <ul ng-repeat="s in myskill" id="skillvalue" >
                         <li href="#" editable-text="s.skillvalue">{{s.skillvalue || "empty"}}</li>
 
                     </ul>
@@ -114,15 +115,15 @@
 
                     <br/><br/>
                 </div>
-                <div class="col-sm-12" id="education"style="border-bottom: 1px solid #c0c0c0; ">
+                <div class="col-sm-12" id="education" >
                     <br/><br/>
-                    <div ng-repeat="i in myimage"style="display: inline;">
-                        <img src="{{i.education}}"style="display: inline; width: 30px;height: 30px;margin-left: 20px;"/>
+                    <div ng-repeat="i in myimage"id="divimg">
+                        <img src="{{i.education}}" id="imgeducation"/>
                     </div>
-                    <p style="display: inline; font-size: 20px;">Education</p>
-                    <ul ng-repeat="e in myeducation" style="margin-top: 10px;">
+                    <p id="txttitlebackground">Education</p>
+                    <button id="btnAdd" >Add</button>
+                    <ul ng-repeat="e in myeducation" id="educationvalue">
                         <li href="#" editable-text="e.educationvalue">{{e.educationvalue || "empty"}}</li>
-
                     </ul>
 
                     <br/><br/>
@@ -130,9 +131,6 @@
                 <hr>
 
             </div>
-
-
-
         </div>
 
     </div>
